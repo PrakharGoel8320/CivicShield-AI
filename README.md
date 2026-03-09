@@ -539,6 +539,4 @@ This project was built for the Circuit Minds Hackathon. Feel free to fork and cu
 
 ---
 
-**Built with ❤️ for Circuit Minds Hackathon 2026**
-
 **Version 2.0** - Now with Full Automation! 🚀
