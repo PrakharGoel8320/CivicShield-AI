@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+*.egg
+*.pyc
+
+# Node
+node_modules/
+.next/
+out/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+
+# Exports (but keep training datasets)
+exports/
+!training_datasets/*.csv
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Docker
+*.pid
+
+
+# Development files
+test_*.py
+analyze_*.py
+*_test.py
+debug_*.py
+FIXES_APPLIED.md
+TODO.md
+
+# Production - trained models are stored in memory
+trained_models/
+model_exports/
