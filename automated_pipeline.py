@@ -14,6 +14,7 @@ from datetime import datetime
 from typing import Optional, Dict, List, Any
 import sys
 import json
+import os
 
 # Setup logging
 logging.basicConfig(
@@ -375,8 +376,11 @@ def main():
     """Main entry point"""
     import argparse
     
+    # Get default API URL from environment variable or use localhost
+    default_api_url = os.getenv('BACKEND_URL', os.getenv('API_URL', 'http://localhost:8000'))
+    
     parser = argparse.ArgumentParser(description='CivicShield AI - Automated ML Pipeline')
-    parser.add_argument('--api-url', default='http://localhost:8000', help='Backend API URL')
+    parser.add_argument('--api-url', default=default_api_url, help='Backend API URL (or set BACKEND_URL env var)')
     parser.add_argument('--watch-folder', default='sensor_data', help='Folder to monitor for CSV files')
     parser.add_argument('--output-folder', default='prediction_results', help='Folder for prediction results')
     parser.add_argument('--interval', type=int, default=30, help='Check interval in seconds')
