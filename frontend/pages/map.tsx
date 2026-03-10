@@ -5,7 +5,7 @@ import axios from 'axios'
 import dynamic from 'next/dynamic'
 import { MapPin, Loader, AlertCircle } from 'lucide-react'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000').replace(/\/+$/, '')
 
 // Dynamically import Leaflet components (client-side only)
 const MapContainer = dynamic(

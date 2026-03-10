@@ -6,7 +6,7 @@ import axios from 'axios'
 import { Brain, CheckCircle2, Loader, AlertCircle, TrendingUp } from 'lucide-react'
 import { Bar } from 'react-chartjs-2'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000').replace(/\/+$/, '')
 
 export default function Train() {
   const [targetOptions, setTargetOptions] = useState<any[]>([])

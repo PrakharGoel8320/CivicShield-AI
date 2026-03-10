@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import axios from 'axios'
 import { Upload as UploadIcon, FileText, CheckCircle2, AlertCircle, Loader } from 'lucide-react'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000').replace(/\/+$/, '')
 
 export default function Upload() {
   const [files, setFiles] = useState<File[]>([])

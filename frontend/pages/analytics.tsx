@@ -6,7 +6,7 @@ import axios from 'axios'
 import { Bar, Doughnut } from 'react-chartjs-2'
 import { TrendingUp, Database, Activity, Loader } from 'lucide-react'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000').replace(/\/+$/, '')
 
 export default function Analytics() {
   const [loading, setLoading] = useState(true)

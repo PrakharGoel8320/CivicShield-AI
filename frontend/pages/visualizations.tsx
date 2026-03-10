@@ -10,7 +10,7 @@ import { BarChart3, Loader, TrendingUp } from 'lucide-react'
 // @ts-ignore - react-plotly.js doesn't have type definitions
 const Plot = dynamic(() => import('react-plotly.js'), { ssr: false }) as any
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000').replace(/\/+$/, '')
 
 export default function Visualizations() {
   const [loading, setLoading] = useState(true)
